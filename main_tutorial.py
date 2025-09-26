@@ -1,15 +1,20 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow # Usamos QMainWindow ahora
+from PyQt6 import uic # Importamos el cargador de UI
 
-# 1. Preparar la aplicación
+# 1. Creamos la clase de nuestra ventana
+class ChatWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        # Carga el diseño del archivo .ui y lo aplica a esta instancia (self)
+        uic.loadUi('chat_window.ui', self)
+
+# 2. Preparamos la aplicación
 app = QApplication(sys.argv)
 
-# 2. Crear la ventana (el widget principal)
-mi_ventana = QWidget()
-mi_ventana.setWindowTitle("Mi Primera GUI PyQt6") # Puedes añadir esto para darle título
+# 3. Creamos la instancia de nuestra ventana personalizada
+mi_ventana = ChatWindow()
 
-# 3. Mostrar la ventana
+# 4. Mostrar y ejecutar
 mi_ventana.show()
-
-# 4. Iniciar el bucle de eventos y esperar que el usuario interactúe
 sys.exit(app.exec())
