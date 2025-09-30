@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>524</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="main_layout">
+    <item>
+     <widget class="QScrollArea" name="chat_scroll">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="chat_container">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>502</width>
+         <height>676</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="input_layout">
+       <item>
+        <widget class="QLineEdit" name="message_input">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+				background-color: white;
+                border: 1px solid #D1D1D1;
+                border-radius: 15px;
+                padding: 5px 10px;
+                font-size: 14px;
+				}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Type a message...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="send_button">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+					background-color: #128C7E;
+                	color: white;
+                	border: none;
+                	border-radius: 15px;
+                	padding: 8px 16px;
+                	font-size: 14px;
+					}
+					QPushButton:hover{
+												background-color: #075E54;
+												}</string>
+         </property>
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

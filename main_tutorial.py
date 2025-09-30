@@ -7,7 +7,8 @@ class ChatWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         # Carga el diseño del archivo .ui y lo aplica a esta instancia (self)
-        uic.loadUi('chat_window.ui', self)
+        # uic.loadUi('chat_window.ui', self)
+        uic.loadUi('chat_test.ui', self)
 
 # 2. Preparamos la aplicación
 app = QApplication(sys.argv)
